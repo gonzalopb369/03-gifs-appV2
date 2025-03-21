@@ -14,9 +14,13 @@ export const routes: Routes = [
                 loadComponent: () => import('./gifs/pages/search-page/search-page.component') //lazyload
             },
             {
+                path: 'history/:query', // argumentos dinámicos
+                loadComponent: () => import('./gifs/pages/gif-history/gif-history.component') //lazyload
+            },
+            {
                 path: '**',
                 redirectTo: 'trending'
-            }
+            }           
         ]
     },    
     {
